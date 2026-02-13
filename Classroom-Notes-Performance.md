@@ -12,25 +12,25 @@
 - **Busy time ($B$)**
     - The cumulative amount of time during the **Observation Time** ($T$) that the resource was actually processing requests
 - **Accomulated time ($W$)**
-    - number of total time (???)
+    - The total **cumulative time** spent by all jobs (requests) within the system during the observation period.
 
 ## Metrics Definitions and formulas
 
 - **Arrival Rate ($\lambda$)**
     - The frequency at which new requests or tasks enter the system over a specific period
-    - $\lambda = A/T$
+    - $\lambda = \frac{A}{T}$
 
 - **Service Time ($S$)**
     - The actual time a resource (like a CPU) spends processing a specific request
-    - $S = B/C$
+    - $S = \frac{B}{C}$
 
 - **Service Rate ($\mu$)** 
     - Frequency at which a system processes requests
-    - $\mu = 1/S$
+    - $\mu = \frac{1}{S}$
 
 - **Utilization Time ($U$)**
     - The fraction or percentage of time that a resource is busy processing requests
-    - $U = \frac{B}{T} \quad$ dove $\quad 0 \le U \le 1$
+    - $U = \frac{B}{T} \quad$ where $\quad 0 \le U \le 1$
 
 - **Throughput ($X$)**
     - The rate at which requests are successfully completed and delivered by the system
@@ -38,15 +38,30 @@
 
 - **Avarage Response Time ($R$)**
     - The average amount of time a single job spends in the system from arrival to completion.
-    - $R = W/C$
+    - $R = \frac{W}{C}$
 
 - **Avarage Numbers of Jobs ($N$)**
     - The average number of requests present in the system (either waiting or being processed) during the observation interval
-    - $N = W/T$
+    - $N = \frac{W}{T}$ 
 
 ## Laws
-- **Utilization Law**
-- **Little's Law**
+- **Utilization Law** ($U = X \cdot S$)
+
+    - Calculate the **Utilization Time ($U$)** from **Throughput ($X$)** and **Service Time ($S$)**
+    - $U = X \cdot S \quad$ where $\quad 0 \le X \cdot S \le 1 \quad$ and having $\quad X \le \frac{1}{S} \quad$ and the $\quad \mu \quad$ formula, we can say that ***$\quad X \le \mu$***
+
+- **Little's Law** ($N = X \cdot R$)
+    - Calculate the **Avarage Numbers of Jobs ($N$)** from:
+        - Throughput ($X$)
+        - Avarage Response Time ($R$)
+    - **How the formula come from?** Having:
+        - $\frac{W}{T}$ is the Average Number of Jobs ($N$) in the system.
+        - $\frac{C}{T}$ is the Throughput ($X$).
+        - $\frac{W}{C}$ is the Average Response Time ($R$).
+        - And simply do: $\frac{W}{T} = \frac{C}{T} \times \frac{W}{C}$
+    - From this law we can also calculate an other relation about the **Avarage Response Time ($R$)**
+        - $R = N \cdot \frac{1}{X}$
+        
 - **Forced Flow Law**
 
 
