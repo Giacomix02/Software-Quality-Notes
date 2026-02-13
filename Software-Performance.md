@@ -38,6 +38,47 @@ Identify **key resources** and **events** in a system, then write (simulation) s
     - **Service Demands**: Amount of resources needed to execute “some part” of the software
     - **Service Rate**: Number of operations of a device per unit of time
 
-## 
+## System Performance vs Software Performance
+
+### System Performance
+
+- *Indices* refer to **actual time measures** under certain workloads
+- **System** may be a **generic term** (e.g. a device, a PC, etc.)
+
+### Software Performance
+
+- *Indices* may refer to **actual time measures** (software+platform models) or to **parametric descriptions** (software models)
+- In order to **synthesize** the workload the **software must be explicitly modeled**
+
+- **Goal:**
+    - find **bottlenecks** also at the software level
+
+
+## Performance Engineering
+
+### During Architectural Design
+
+-  Set Explicit **Performance Goals**
+- Work with **customer**(s) to understand **workload & application**
+- Build initial model(s)
+- Find performance **bottlenecks in the software**
+- Evaluate *sizing* (**how much hardware**) and fattibility
+- Compare **alternative architectures**
+
+### During Testing
+- **Debug/validate models** & testbed
+-  **Measure performance of components** and subsystems
+- **Verify** that performance **goals have been met**
+    - work with developers to **resolve any performance shortfalls**
+- Use profiling tools to characterize products
+
+### After Deployment
+- Present/publish measurement results
+- Present/publish tuning recommendations for configurable products
+- **Collect measurements at customer sites**
+-  Work with developers and support organization to resolve performance problems that arise in the field
+- Suggest **enhancements** for **future versions** of product
+
+
 
 [Return Index](./README.md)
