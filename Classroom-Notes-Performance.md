@@ -62,7 +62,49 @@
     - From this law we can also calculate an other relation about the **Avarage Response Time ($R$)**
         - $R = N \cdot \frac{1}{X}$
         
-- **Forced Flow Law**
+## Single node Laws and relations (Open System)
+
+- **Completions in time $T$** ($C$)
+    - Number of job completed in a defined time in **all system**
+    - $C_{D1}$ mean the number of job completed for **single ($D1$) processor**
+
+- **Number of Visits** ($V_i$)
+    - average number of times a single job requests service from a specific resource $i$ during its stay in the system
+    - $V_i = \frac{C_i}{C}$
+
+- **Demand** ($D_i$)
+    - total time spent on average in the i-th node
+    - $D_i = V_i \cdot S_i$
+
+### Laws
+
+- **Forced flow law** ($X_i = V_i \cdot X$)
+    - describes the **relationship** between the *Throughput* of a ***single component*** and the *total Throughput* of the **entire system**
+
+- **Utilization Law for** *single node*($U_i = X \cdot D_i$)
+
+#### Little's Law
+
+- **Little's Law for** *single node* ($N_i = X_i \cdot $) 
+
+- **Little's Law for** *entire system* ($R = \sum_i \frac{N_i}{X}$)
+
+From this two relations we can obtain a new relation about the **Avarage response time**:
+$$R=\sum_i V_i \cdot R_i$$
+
+ ### Relations with demand
+
+ We want to maximaze the **Demand** $D$
+
+ $$D_{max}=max\{V_i ; S_i\}$$
+
+ From the little low we also have:
+ $$X \le \frac{1}{D_{max}}$$
+ From the Little law: 
+ $$N = X \cdot R\quad so \quad R=\frac{N}{X}$$
+ **Finally** we have:
+ $$R \ge N \cdot D_ {max}$$
+
 
 
 
